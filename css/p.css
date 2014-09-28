@@ -1,0 +1,32 @@
+
+#controls{
+    padding: 10px;
+    border: #808080 1px solid;
+}
+#canvas3d{
+    height: 420px;
+    width: 100%;
+}
+#list{
+    overflow-y: scroll;
+    max-height: 420px;
+}
+#progress{
+    background: #ffd800;
+}
+#tips{
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    background: #1b1b1c;
+    color: white;
+    display: none;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.2em;
+}
+#tools{
+    position: absolute;
+    left: 20px;
+    top: 0px;
+}

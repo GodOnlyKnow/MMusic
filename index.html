@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Music Player</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/p.css" />
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/babylon.1.13.js"></script>
+        <script src="MMusic/B3D.js"></script>
+        <script src="MMusic/MMusic.js"></script>
+        <script src="js/player.js"></script>
+    </head>
+    <body>
+        <div id="player" class="container">
+            <div id="controls" class="row">
+                <div class="col-xs-1"></div>
+                <div id="controlsleft" class="col-xs-3">
+                    <button type="button" id="btnPre" class="btn btn-default">
+                        <span class="glyphicon glyphicon-step-backward"></span>
+                    </button>
+                    <button type="button" id="btnPlay" class="btn btn-primary btn-lg">
+                        <span class="glyphicon glyphicon-play"></span>
+                    </button>
+                    <button type="button" id="btnNext" class="btn btn-default">
+                        <span class="glyphicon glyphicon-step-forward"></span>
+                    </button>
+                </div>
+                <div id="controlscenter" class="col-xs-1"></div>
+                <div id="controlsright" class="col-xs-7">
+                    <br />
+                    <div id="progress" class="progress">
+                        <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 30%;">
+                            <span class="sr-only">40%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="effect" class="row">
+                <div id="list" class="col-xs-4 list-group">
+                </div>
+                <div id="shower" class="col-xs-8">
+                    <canvas id="canvas3d">can not create canvas.</canvas>
+                    <div id="tools" class="dropdown">
+                        <button id="dLabel" class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Effect
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <li role="presentation"><a href="#" onclick="ChangeModel(this)" role="menuitem">B3D</a></li>
+                            <li role="presentation"><a href="#" onclick="ChangeModel(this)" role="menuitem">2D</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tips">0:0</div>
+    </body>
+</html>

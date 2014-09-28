@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/babylon.1.13.js"></script>
+        <style>
+            html,body{
+                width: 100%;
+                height: 100%;
+                padding: 0px;
+                margin: 0px;
+                overflow: hidden;
+            }
+            #canvas{
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+
+        <script>
+            if (BABYLON.Engine.isSupported()) {
+                var canvas = document.getElementById("canvas");
+                var engine = new BABYLON.Engine(canvas, true);
+
+                BABYLON.SceneLoader.Load("scene/", "ground.babylon", engine, function (newScene) {
+                    newScene.executeWhenReady(function () {
+                        newScene.activeCamera.attachControl(canvas);
+
+                        engine.runRenderLoop(function () {
+                            newScene.render();
+                        });
+                    });
+                }, function (p) {
+                    p.onerror = function () {
+                        console.log("error");
+                    };
+                });
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+.container,.container-fluid{
+    border: #ff6a00 1px solid;
+}
+.col-md-1,.col-md-2,.col-md-4,.col-md-6,.col-md-15{
+    background: #ffd800;
+    border: #000 1px solid;
+}
